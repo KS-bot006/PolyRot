@@ -20,6 +20,7 @@ Window{
     property bool is_intro_page_visible: false
     property bool is_cipher_page_visible: false
     property bool is_decipher_page_visible: false
+    property bool is_about_visible: false
     // Global Variables
 
 
@@ -32,7 +33,7 @@ Window{
                 properties: "scale"
                 from: 0 
                 to: 1 
-                duration: 2000
+                duration: 1000
                 easing.type: Easing.OutExpo
                 onFinished: {is_intro_page_visible=true; page_one.z=1}
             }
@@ -44,7 +45,7 @@ Window{
                     properties: "opacity"
                     from: 1
                     to: 0
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo 
                 }
                 NumberAnimation{
@@ -52,7 +53,7 @@ Window{
                     properties: "opacity"
                     from: 0
                     to: 1
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo
                 }
                 onFinished: { is_intro_page_visible=false; is_cipher_page_visible=true; page_one.z=0; page_two.z=1 }
@@ -66,7 +67,7 @@ Window{
                     properties: "opacity"
                     from: 0
                     to: 1
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo 
                 }
                 NumberAnimation{
@@ -74,7 +75,7 @@ Window{
                     properties: "opacity"
                     from: 1
                     to: 0
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo
                 }
                 onFinished: { is_intro_page_visible=true; is_cipher_page_visible=false; page_one.z=1; page_two.z=0 }
@@ -89,7 +90,7 @@ Window{
                     properties: "opacity"
                     from: 1
                     to: 0
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo 
                 }
                 NumberAnimation{
@@ -97,7 +98,7 @@ Window{
                     properties: "opacity"
                     from: 0
                     to: 1
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo
                 }
                 onFinished: { is_intro_page_visible=false; is_decipher_page_visible=true; page_one.z=0; page_three.z=1 }
@@ -111,7 +112,7 @@ Window{
                     properties: "opacity"
                     from: 0
                     to: 1
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo 
                 }
                 NumberAnimation{
@@ -119,12 +120,60 @@ Window{
                     properties: "opacity"
                     from: 1
                     to: 0
-                    duration: 1500
+                    duration: 1000
                     easing.type: Easing.OutExpo
                 }
                 onFinished: { is_intro_page_visible=true; is_decipher_page_visible=false; page_one.z=1; page_three.z=0 }
             }
     // Global Animations
+
+    // About Animation
+    ParallelAnimation{
+        id: show_about
+        running: false
+        onStarted: is_about_visible=true
+        NumberAnimation{
+            target: about
+            properties: "height"
+            from: 0
+            to: 452
+            duration: 1000
+            easing.type: Easing.OutExpo
+        }
+
+        NumberAnimation{
+            target: about
+            properties: "opacity"
+            from: 0
+            to: 1
+            duration: 500
+            easing.type: Easing.OutExpo
+        }
+    }
+
+    ParallelAnimation{
+        id: hide_about
+        running: false
+        onFinished: is_about_visible=false
+        NumberAnimation{
+            target: about
+            properties: "height"
+            from: 452
+            to: 0
+            duration: 1000
+            easing.type: Easing.OutExpo
+        }
+
+        NumberAnimation{
+            target: about
+            properties: "opacity"
+            from: 1
+            to: 0
+            duration: 500
+            easing.type: Easing.OutExpo
+        }
+    }
+    // About Animation
 
     //The Main window of the app
     Rectangle{
@@ -196,8 +245,8 @@ Window{
                 id: info_btn_mouse
                 anchors.fill: parent
                 hoverEnabled: true
-                onClicked: app.showMinimized()
                 cursorShape: Qt.PointingHandCursor
+                onClicked: is_about_visible==false ? show_about.running=true : hide_about.running=true
             }
         }
 
@@ -248,6 +297,25 @@ Window{
         }
 
     // Title Bar Buttons
+
+        // About Page
+        Image{
+            id: about
+            anchors.centerIn: parent
+            z: 4
+            source: "about.png"
+            width: 502
+            height: 0
+
+            MouseArea{
+                anchors.fill: parent
+                id: about_mouse
+                hoverEnabled: parent.height==452 ? true : false
+                cursorShape: parent.height==452 ? Qt.PointingHandCursor : Qt.Arrow
+                onClicked: hide_about.running=true
+            }
+        }
+        // About Page
 
         // Custom Title Bar
         Rectangle{
