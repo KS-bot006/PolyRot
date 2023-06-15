@@ -1,7 +1,7 @@
 
 # PolyRot-The Power the Rot Cipher in the Palm Of Your Hand.
 
-PolyRot is your ultimate gateway to access the power of theRot cipher at its finest.
+## PolyRot is your ultimate gateway to access the power of theRot cipher at its finest.
 
 
 
