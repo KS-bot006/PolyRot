@@ -2,6 +2,7 @@ from PySide2.QtWidgets import QApplication
 from PySide2.QtQml import QQmlApplicationEngine
 import sys
 from PySide2.QtCore import QObject, Slot
+from PySide2.QtGui import QIcon
 
 class brain(QObject):
     def __init__(self):
@@ -67,6 +68,7 @@ class brain(QObject):
         return ''.join(deciphered_msg)
 
 app = QApplication(sys.argv)
+app.setWindowIcon(QIcon("./src/icon.png"))
 backend = brain()
 win = QQmlApplicationEngine()
 win.rootContext().setContextProperty("brain", backend)
