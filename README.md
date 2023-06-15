@@ -1,7 +1,7 @@
 
 # PolyRot-The Power the Rot Cipher in the Palm Of Your Hand.
 
-## PolyRot is your ultimate gateway to access the power of theRot cipher at its finest.
+## PolyRot is your ultimate gateway to access the power of the Rot cipher at its finest.
 
 
 
@@ -9,19 +9,19 @@
 ## Getting the basics right:
 
 So, what is the Rot Cipher? For starters, Rot means rotation.
-And in case of messages, or strings, we rotate the letters of the message by "n" times.
+And in case of messages, or strings, we rotate each letter of the message by "n" times, where "n" is an integer.
 
 So, here's a basic example of how it works.
 
-Let us say, I have a message I want to cipher, before sending it to a friend.
+Let us say, I have a message that I want to cipher before sending it to a friend.
 
-So, my message is ```Hello!```
+Say my message is ```Hello!```
 Now, I have to pick a Rot value. Say, 1.
-Now we take my message, and shift each letter of the message/string by one letter to the right.
-So ```Hello!```, becomes ```Ifmmp!```.
+Now we take my message, and shift each letter of the message/string by one letter to the right in the alphabet. If there's a ```"z"```, we come back to an ```a```.
+Therefore ```Hello!```, becomes ```Ifmmp!```.
 Punctuations and numbers don't change when doing a Rot. 
 
-
+Deciphering a message is the same process, but done backwards.
 ## About PolyRot
 
 So, Here's where PolyRot comes in. Previously, we understood how the Rot Cipher works by ciphering the word ```Hello!``` using ```Rot-1```.
