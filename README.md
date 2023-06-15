@@ -31,7 +31,8 @@ Hence PolyRot was born. With a modern, sleek and easy to use interface, PolyRot 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App ScreenShot]!(https://github.com/KS-bot006/PolyRot/assets/111749764/5e306344-82d8-4621-b637-5a7668131431)
+
 
 
 ## Installation
