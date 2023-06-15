@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from PySide2.QtWidgets import QApplication
 from PySide2.QtQml import QQmlApplicationEngine
 import sys
