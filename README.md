@@ -30,10 +30,10 @@ But doing it for a whole sentence or anything longer is hard and tedious, and wo
 Hence PolyRot was born. With a modern, sleek and easy to use interface, PolyRot lets you harness the power of the Rot Cipher with ease.
 
 ## Screenshots
-For those who wanna take at a look at it before downloading, here's a sneak-peek of what the UI looks like (https://github.com/KS-bot006/PolyRot/blob/main/Screenshot.png).
+For those who wanna take at a look at it before downloading, here's a sneak-peek of what the UI looks like (https://github.com/KS-bot006/PolyRot/main/Screenshot.png).
 This is only the Opening Page.....download it, and there's more UI goodness to experience ;-)
 
-![Screen shot of the App](https://github.com/KS-bot006/PolyRot/blob/main/Screenshot.png)
+![Screen shot of the App](https://github.com/KS-bot006/PolyRot/main/Screenshot.png)
 
 ## Installation
 
