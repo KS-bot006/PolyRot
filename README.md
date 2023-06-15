@@ -36,7 +36,7 @@ Hence PolyRot was born. With a modern, sleek and easy to use interface, PolyRot 
 
 ## Installation
 
-Installing PolyRot is very easy. There's a zip file in the releases section, that contains executable binaries of the app. All you have to do, is download it and extract it. In it will a binary, PolyRot.exe, which when executed, launches PolyRot.
+Installing PolyRot is very easy. There's a zip file in the releases section, that contains executable binaries of the app. All you have to do, is download it and extract it. In it will be a binary named PolyRot.exe, which when executed, launches PolyRot.
 
 ### NOTE: Executable binaries for linux coming soon!!
 
