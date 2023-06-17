@@ -1,5 +1,5 @@
 
-# PolyRot-The Power the Rot Cipher in the Palm Of Your Hand.
+# PolyRot-The Power of the Rot Cipher in the Palm Of Your Hand.
 
 ## PolyRot is your ultimate gateway to access the power of the Rot cipher at its finest.
 
